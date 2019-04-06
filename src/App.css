@@ -1,0 +1,17 @@
+.cellbtn {
+  width: 40px;
+  height:40px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.3)
+}
+
+.cellbtn:hover {
+  box-shadow: 0px 0px 5px #ccc;
+}
+
+table {
+  background: rgba(156, 124, 111, 0.808);
+  margin: 100px auto;
+  border: 5px solid rgb(116, 91, 81);
+}

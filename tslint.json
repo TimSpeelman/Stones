@@ -1,0 +1,39 @@
+{
+    "extends": [
+        "tslint:recommended" // https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts
+    ],
+    "lib": [
+        "es2016"
+    ],
+    "rules": {
+        "no-namespace": false,
+        "max-classes-per-file": false,
+        "interface-name": false, // Do not require interface names to start with an I
+        "object-literal-sort-keys": false, // Do not sort object literal keys
+        "no-console": false, // Console-log not allowed, maybe replace later by an explicit custom log function?
+        "forin": false, // for ( .. in .. ) should be filtered with an if-expression (dangerous to turn off?)
+        "no-empty-interface": false, // Allow interfaces to be empty
+        "variable-name": false, // Don't enforce a format
+        "only-arrow-functions": false, // Need arrowless functions in specs
+        "trailing-comma": [
+            true,
+            {
+                "multiline": {
+                    "objects": "multiline",
+                    "arrays": "multiline",
+                    "functions": "multiline",
+                    "typeLiterals": "multiline"
+                },
+                "esSpecCompliant": true
+            }
+        ],
+        "space-before-function-paren": [
+            true,
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ]
+    }
+}

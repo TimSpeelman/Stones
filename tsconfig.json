@@ -1,0 +1,53 @@
+/**
+ * For tsconfig manual see:
+ * @see https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+ * 
+ * Schema:
+ * @see http://json.schemastore.org/tsconfig
+ * @see https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+ */
+{
+    "compilerOptions": {
+        // "module": "umd",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es5",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "sourceRoot": "./src",
+        "outDir": "./dist",
+        "baseUrl": "./src",
+        "jsx": "react",
+        "allowUnreachableCode": false,
+        "lib": [
+            "es2015", // why needed?
+            "dom" // for react
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "paths": {}
+    },
+    "exclude": [
+        "node_modules/*",
+        "dist",
+        "build"
+    ],
+    "include": [
+        "src/**/*",
+        "test/**/*",
+        "packages/**/*",
+        "scripts/**/*",
+    ],
+    "lint": [
+        {
+            "include": [
+                "test/**/*"
+            ],
+            "exclude": [
+                "src/model/migrations/m_*.ts", // These files are generated
+            ]
+        }
+    ]
+}
