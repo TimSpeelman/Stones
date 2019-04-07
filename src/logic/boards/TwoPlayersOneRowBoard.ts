@@ -14,7 +14,7 @@ import { make2DArrayOf } from "../util/make2DArrayOf";
 export class TwoPlayersOneRowBoard {
     public static create(width: number, height: number): Board {
         const values =
-            make2DArrayOf(width, height, () => -1).map(
+            make2DArrayOf(height, width, () => -1).map(
                 // Top row player 0
                 (r, rowIndex) => rowIndex === 0 ? r.map((c) => 0)
                     // Bottom row player 1
